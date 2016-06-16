@@ -13,7 +13,11 @@ t = (0:Fs-1)/Fs;
 N = Fs;
 
 %%
-%dtmfEncoder();
-myrecord();
+dtmfEncoder();
+%myrecord();
+tic
 filter_Decoder();
-%goertzel_decoder();
+toc
+% tic
+% goertzel_decoder();
+% toc

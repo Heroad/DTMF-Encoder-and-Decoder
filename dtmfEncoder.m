@@ -6,7 +6,7 @@ lowFre = lowFreArray(i);                                                      %²
 highFre = highFreArray(j);                                                   %²é¸ßÆµ±í
 x = sin(2*pi*lowFre*t) + sin(2*pi*highFre*t);                        % ¹¹³ÉË«ÆµÐÅºÅ
 %sound(x,Fs);                                                                      %²¥·Å
-figure(1);subplot(211);plot(t, x);title('Ë«ÆµÐÅºÅx(n)');xlabel('time (milliseconds)');
+figure(1);subplot(211);plot(x);title('Ë«ÆµÐÅºÅx(n)');xlabel('time (milliseconds)');
 
 %%
 %FFT

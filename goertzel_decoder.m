@@ -1,9 +1,9 @@
 %用goertzel算法识别信号
 %%
 freq_indices = round(allFreArray/Fs*N) + 1;
-X=goertzel(x(1:N),freq_indices);                                                       % 用 Goertzel 算法计算八点 DFT 样本
-val = abs(X);                                                                                   % 列出八点 DFT 向量
-figure(2);stem(freq_indices,val,'.');xlabel('k');ylabel('|X(k)|')                           % 画出 8 点 DFT 幅度
+dft_data=goertzel(x(1:N),freq_indices);                                                       % 用 Goertzel 算法计算八点 DFT 样本
+val = abs(dft_data);                                                                                   % 列出八点 DFT 向量
+figure(2);stem(allFreArray,val,'.');set(gca,'xtick',allFreArray);xlabel('k');ylabel('|X(k)|')                           % 画出 8 点 DFT 幅度
 %axis([10 50 0 120])
 limit = 10;                                                                        %阈值
 for r=1:4
